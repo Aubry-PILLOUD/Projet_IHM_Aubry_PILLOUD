@@ -1,0 +1,32 @@
+.hidden {
+  display: none !important;
+}
+
+#pEntree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+#pEntree h1{
+    font-size: 10vh;
+}
+
+#pEntree .buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#pEntree button {
+  font-size: 24px;      /* taille du texte */
+  font-family: Arial;  /* police */
+  padding: 24px 48px;   /* taille du bouton (espace intérieur) */
+  cursor: pointer;      /* curseur au survol */
+  /* autres styles possibles */
+  background-color: white;
+  color: black;
+  border: solid black;
+}

@@ -1,5 +1,5 @@
-import "./css/header.css";
+import "./css/headerCommun.css";
 
 export default () => {
-  return <header>IDE Interim</header>;
+  return <header id="hCommun">IDE Interim</header>;
 };

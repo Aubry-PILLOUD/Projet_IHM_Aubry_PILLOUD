@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 #pEntree h1{
@@ -20,12 +20,11 @@
   margin-top: 20px;
 }
 
-#pEntree button {
-  font-size: 24px;      /* taille du texte */
-  font-family: Arial;  /* police */
+#pEntree .buttons button {
+  font-size: 24px;
+  font-family: Arial;
   padding: 24px 48px;   /* taille du bouton (espace intérieur) */
   cursor: pointer;      /* curseur au survol */
-  /* autres styles possibles */
   background-color: white;
   color: black;
   border: solid black;

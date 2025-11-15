@@ -1,33 +1,66 @@
+import { createSignal } from "solid-js";
 import HeaderCommun from "./headerCommun";
+import "./css/stInscription.css";
 
 export default (props) => {
+
+    const [mdp, setMdp] = createSignal("");
+    const [confMdp, setConfMdp] = createSignal("");
+    const [error, setError] = createSignal("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (mdp() !== confMdp()) {
+            setError("Les mots de passe ne correspondent pas");
+        } else {
+            setError("");
+            props.setPage("pageTableauBord");
+        }
+    };
+
   return (
-    <div id="pInscription" class={props.hidden ? "hidden" : ""}>
+    <div class={props.hidden ? "hidden" : ""}>
         <HeaderCommun />
-        <h1>Inscription</h1>
-        <div class="formInscription">
-            <form action="" method="get" class="form-inscription">
-                <div class="form-inscription">
-                    <label for="utilID">Identifiant : </label>
+        <div id="pInscription">
+            <h1>Inscription</h1>
+            <form onSubmit={handleSubmit} class="form-inscription">
+                <div class="formInscription">
+                    <span class="labelText">Identifiant</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="utilID" id="utilID" required />
                 </div>
-                <div class="form-inscription">
-                    <label for="email">Email : </label>
+                <div class="formInscription">
+                    <span class="labelText">Email</span>
+                    <span class="doublePoints">:</span>
                     <input type="email" name="email" id="email" required />
                 </div>
-                <div class="form-inscription">
-                    <label for="telephone">Numéro de téléphone : </label>
-                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required/>
+                <div class="formInscription">
+                    <span class="labelText">Numéro de téléphone</span>
+                    <span class="doublePoints">:</span>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required />
                 </div>
-                <div class="form-inscription">
-                    <label for="mdp">Mot de passe : </label>
-                    <input type="password" id="mdp" name="mdp" required />
+                <div class="formInscription">
+                    <span class="labelText">Mot de passe</span>
+                    <span class="doublePoints">:</span>
+                    <input type="password" id="mdp" name="mdp" required 
+                        onInput={(e) => setMdp(e.currentTarget.value)}
+                        value={mdp()}
+                    />
                 </div>
-                <div class="form-inscription">
-                    <label for="confMdp">Confirmation Mot de passe : </label>
-                    <input type="password" id="confMdp" name="confMdp" required />
+                <div class="formInscription">
+                    <span class="labelText">Confirmation Mot de passe</span>
+                    <span class="doublePoints">:</span>
+                    <input type="password" id="confMdp" name="confMdp" required 
+                        onInput={(e) => setConfMdp(e.currentTarget.value)}
+                        value={confMdp()}
+                    />
                 </div>
-                <div class="form-inscription">
+                {error() && (
+                    <div style={{ color: "red", "margin-top": "10px", "font-size": "30px" }}>
+                    {error()}
+                    </div>
+                )}
+                <div class="boutonValid">
                     <input type="submit" value="Valider" />
                 </div>
             </form>

@@ -1,0 +1,64 @@
+.hidden {
+  display: none !important;
+}
+
+#pInscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+#pInscription h1{
+  font-size: 10vh;
+}
+
+.form-inscription {
+  max-width: 1000px;
+  margin: 0 auto; /* centre formulaire horizontal */
+}
+
+.formInscription {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr; /* texte - ':' - input */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.labelText {
+  text-align: right;
+  padding-right: 10px;
+  white-space: nowrap;
+  font-size: 40px;
+}
+
+.doublePoints {
+  text-align: center;
+  font-weight: bold;
+  /* Centre horizontalement les doubles points */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.boutonValid {
+  text-align: center;
+  padding-top: 100px; /* espacement au dessus du bouton */
+}
+
+.boutonValid input{
+  font-size: 24px;
+  font-family: Arial;
+  padding: 18px 48px;   /* taille du bouton (espace intérieur) */
+  cursor: pointer;      /* curseur au survol */
+  background-color: white;
+  color: black;
+  border: solid black;
+}

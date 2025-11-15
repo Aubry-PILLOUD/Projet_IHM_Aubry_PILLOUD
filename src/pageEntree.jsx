@@ -1,4 +1,4 @@
-import "./css/entree.css"
+import "./css/stEntree.css"
 
 export default (props) => {
   return (

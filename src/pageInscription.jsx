@@ -8,13 +8,24 @@ export default (props) => {
     const [confMdp, setConfMdp] = createSignal("");
     const [error, setError] = createSignal("");
 
+    const handleKeyDown = (e) => {
+        if (
+            !(
+            (e.key >= '0' && e.key <= '9') ||
+            ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab', '-'].includes(e.key)
+            )
+        ) {
+            e.preventDefault(); // bloque toute autre touche
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (mdp() !== confMdp()) {
             setError("Les mots de passe ne correspondent pas");
         } else {
             setError("");
-            props.setPage("pageTableauBord");
+            props.setPage("pageCodeVerif");
         }
     };
 
@@ -37,7 +48,7 @@ export default (props) => {
                 <div class="formInscription">
                     <span class="labelText">Numéro de téléphone</span>
                     <span class="doublePoints">:</span>
-                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required />
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" onKeyDown={handleKeyDown} required />
                 </div>
                 <div class="formInscription">
                     <span class="labelText">Mot de passe</span>

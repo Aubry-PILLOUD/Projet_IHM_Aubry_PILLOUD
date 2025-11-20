@@ -12,11 +12,11 @@ export default (props) => {
                 <button onClick={() => props.setPage("pageGestionComp")}>Gestion Comptabilité</button>
             </div>
             <div class="buttons">
-                <button onClick={() => props.setPage("pageCommunication")}>Communication</button>
+                <button class="bCommu" onClick={() => props.setPage("pageCommunication")}>Communication</button>
                 <button onClick={() => props.setPage("pageEvaluation")}>Evaluation des Etablissements</button>
             </div>
             <div class="buttons">
-                <button onClick={() => props.setPage("Securite")}>Sécurité</button>
+                <button onClick={() => props.setPage("pageSecurite")}>Sécurité</button>
             </div>
         </div>
     </div>

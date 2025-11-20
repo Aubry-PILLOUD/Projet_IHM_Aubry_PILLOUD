@@ -32,3 +32,9 @@
   border: solid black;
   box-sizing: border-box;
 }
+
+#pTableauBord button:hover {
+    background-color: black;
+    color: white;
+    border: solid white;
+}

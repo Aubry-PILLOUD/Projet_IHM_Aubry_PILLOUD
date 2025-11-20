@@ -1,33 +1,46 @@
-import HeaderCommun from "./headerCommun";
+import HeaderUtilisateur from "./headerUtilisateur";
+import { createSignal } from "solid-js";
+import "./css/stModifProfil.css"
 
 export default (props) => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        props.setPage("pageTableauBord");
+    };
+
   return (
-    <div id="pModifProfil" class={props.hidden ? "hidden" : ""}>
-        <HeaderCommun />
-        <h1>Profil</h1>
-        <div class="formModifProfil">
-            <form action="" method="get" class="form-profil">
-                <div class="form-profil">
-                    <label for="nom">Nom : </label>
+    <div class={props.hidden ? "hidden" : ""}>
+        <HeaderUtilisateur />
+        <div id="pModifProfil">
+            <h1>Profil</h1>
+            <form onSubmit={handleSubmit} class="form-profil">
+                <div class="formProfil">
+                    <span class="labelText">Nom</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="nom" id="nom" required />
                 </div>
-                <div class="form-profil">
-                    <label for="prenom">Prénom : </label>
+                <div class="formProfil">
+                    <span class="labelText">Prénom</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="prenom" id="prenom" required />
                 </div>
-                <div class="form-profil">
-                    <label for="naissance">Date de naissance : </label>
+                <div class="formProfil">
+                    <span class="labelText">Date de naissance</span>
+                    <span class="doublePoints">:</span>
                     <input type="date" name="naissance" id="naissance" required />
                 </div>
-                <div class="form-profil">
-                    <label for="adresse">Adresse : </label>
+                <div class="formProfil">
+                    <span class="labelText">Adresse</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="adresse" id="adresse" required />
                 </div>
-                <div class="form-profil">
-                    <label for="rpps">Numéro RPPS : </label>
+                <div class="formProfil">
+                    <span class="labelText">Numéro RPPS</span>
+                    <span class="doublePoints">:</span>
                     <input type="number" name="rpps" id="rpps" min="0" default="0" required />
                 </div>
-                <div class="form-profil">
+                <div class="boutonValid">
                     <input type="submit" value="Valider" />
                 </div>
             </form>

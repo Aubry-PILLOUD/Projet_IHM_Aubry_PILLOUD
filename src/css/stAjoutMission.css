@@ -1,0 +1,74 @@
+.hidden {
+  display: none !important;
+}
+
+#pAjoutMission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 45vh;
+}
+
+#pAjoutMission h1{
+  font-size: 5vh;
+}
+
+#pAjoutMission h3{
+    font-size: 25px;
+    text-align: center;
+}
+
+.form-mission {
+  max-width: 1000px;
+  margin: 0 auto; /* centre formulaire horizontal */
+}
+
+.formMission {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr; /* texte - ':' - input */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.labelText {
+  text-align: right;
+  padding-right: 10px;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.doublePoints {
+  text-align: center;
+  font-weight: bold;
+  /* Centre horizontalement les doubles points */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.boutonValid {
+  text-align: center;
+  padding-top: 30px; /* espacement au dessus du bouton */
+}
+
+.boutonValid input{
+  font-size: 20px;
+  font-family: Arial;
+  padding: 10px 48px;   /* taille du bouton (espace intérieur) */
+  cursor: pointer;      /* curseur au survol */
+  background-color: white;
+  color: black;
+  border: solid black;
+}
+
+.boutonValid input:hover{
+    background-color: black;
+    color: white;
+    border: solid white;
+}

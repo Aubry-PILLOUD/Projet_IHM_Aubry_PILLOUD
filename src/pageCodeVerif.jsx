@@ -37,7 +37,7 @@ export default (props) => {
     <div class={props.hidden ? "hidden" : ""}>
       <HeaderCommun />
       <div id="pCodeVerif">
-        <h1>Inscription</h1>
+        <h1>Code de Vérification</h1>
         <form class="code-verif" onSubmit={handleSubmit} novalidate>
           <div class="code-verif">
             <label for="codeV">Code de Verification</label>

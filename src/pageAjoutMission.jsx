@@ -1,47 +1,56 @@
-import HeaderCommun from "./headerCommun";
+import HeaderUtilisateur from "./headerUtilisateur";
+import { createSignal } from "solid-js";
+import "./css/stAjoutMission.css"
 
 export default (props) => {
   return (
-    <div id="pAjoutMission" class={props.hidden ? "hidden" : ""}>
-        <HeaderCommun />
-        <h1>Profil</h1>
-        <div class="formAjoutMission">
-            <form action="" method="get" class="form-mission">
-                <div class="form-mission">
-                    <label for="nomMision">Nom de la Mission : </label>
+    <div class={props.hidden ? "hidden" : ""}>
+        <HeaderUtilisateur />
+        <div id="pAjoutMission">
+            <h1>Ajout de Mission</h1>
+            <form class="form-mission">
+                <div class="formMission">
+                    <span class="labelText">Nom de la Mission</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="nomMision" id="nomMision" required />
                 </div>
                 <div>
                     <h3>Lieu de Travail</h3>
                 </div>
-                <div class="form-mission">
-                    <label for="structure">Structure : </label>
+                <div class="formMission">
+                    <span class="labelText">Structure</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="structure" id="structure" required />
                 </div>
-                <div class="form-mission">
-                    <label for="ville">Ville : </label>
+                <div class="formMission">
+                    <span class="labelText">Ville</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="ville" id="ville" required />
                 </div>
                 <div>
                     <h3>Contrat</h3>
                 </div>
-                <div class="form-mission">
-                    <label for="service">Service : </label>
+                <div class="formMission">
+                    <span class="labelText">Service</span>
+                    <span class="doublePoints">:</span>
                     <input type="text" name="service" id="service" required />
                 </div>
-                <div class="form-mission">
-                    <label for="duree">Durée : </label>
+                <div class="formMission">
+                    <span class="labelText">Durée</span>
+                    <span class="doublePoints">:</span>
                     <input type="number" name="duree" id="duree" required />
                 </div>
-                <div class="form-mission">
-                    <label for="rythme">Rythme : </label>
+                <div class="formMission">
+                    <span class="labelText">Rythme</span>
+                    <span class="doublePoints">:</span>
                     <input type="number" name="rythme" id="rythme" required />
                 </div>
                 <div>
                     <h3>Journées Types</h3>
                 </div>
-                <div class="form-mission">
-                    <label for="heurePrise">Heure de Prise : </label>
+                <div class="formMission">
+                    <span class="labelText">Heure de Prise</span>
+                    <span class="doublePoints">:</span>
                     <select name="heurePrise" id="heurePrise" required>
                         <option value="minuit">Minuit</option>
                         <option value="uneH">1H</option>
@@ -68,8 +77,9 @@ export default (props) => {
                         <option value="vingttroisH">23H</option>
                     </select>
                 </div>
-                <div class="form-mission">
-                    <label for="heureFin">Heure de Fin : </label>
+                <div class="formMission">
+                    <span class="labelText">Heure de Fin</span>
+                    <span class="doublePoints">:</span>
                     <select name="heureFin" id="heureFin" required>
                         <option value="minuit">Minuit</option>
                         <option value="uneH">1H</option>
@@ -97,17 +107,20 @@ export default (props) => {
                     </select>
                 </div>
                 <br />
-                <label for="mCouleur">Couleur : </label>
-                <select name="mCouleur" id="mCouleur" required>
-                    <option value="bleu">Bleu</option>
-                    <option value="rouge">Rouge</option>
-                    <option value="vert">Vert</option>
-                    <option value="noir">Noir</option>
-                </select>
-                <div class="form-mission">
+                <div class="formMission">
+                    <span class="labelText">Couleur</span>
+                    <span class="doublePoints">:</span>
+                    <select name="mCouleur" id="mCouleur" required>
+                        <option value="bleu">Bleu</option>
+                        <option value="rouge">Rouge</option>
+                        <option value="vert">Vert</option>
+                        <option value="noir">Noir</option>
+                    </select>
+                </div>
+                <div class="boutonValid">
                     <input type="submit" value="Valider" />
                 </div>
-            </form>
+                </form>
         </div>
     </div>
   );

@@ -43,3 +43,45 @@
 #hUtil .bProfil:hover + #hUtil .hoverProfil, #hUtil .hoverProfil:hover{
     display: inline-block;
 }
+
+#hUtil .zoneProfil {
+  position: relative;
+}
+
+/* Menu déroulant */
+#hUtil .hoverProfil {
+  position: absolute;
+  top: 100%;           /* Sous le bouton Profil */
+  right: 0;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 4px;
+  z-index: 1000;
+}
+
+/* Affichage au survol */
+#hUtil .zoneProfil:hover .hoverProfil {
+  display: flex;
+}
+
+#hUtil .hoverProfil button {
+  font-size: 14px;
+  font-family: Arial;
+  width: 100px; /* largeur boutons */
+  padding: 10px 0;
+  margin: 0 10px; /* espacement entre boutons */
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: solid black;
+  box-sizing: border-box;
+}
+
+#hUtil .hoverProfil button:hover {
+    background-color: black;
+    color: white;
+    border: solid white;
+}

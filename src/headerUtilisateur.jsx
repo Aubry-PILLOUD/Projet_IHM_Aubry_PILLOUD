@@ -2,7 +2,7 @@ import { createSignal } from "solid-js";
 import HeaderCommun from "./headerCommun";
 import "./css/headerUtilisateur.css";
 
-export default () => {
+export default (props) => {
 
     const [idNom, setIdNom] = createSignal("");
 
@@ -16,10 +16,12 @@ export default () => {
             <HeaderCommun />
         </div>
         <div class="idNom">Nom Prénom</div>
-        <button class="bProfil">Profil</button>
-        <div class="hoverProfil">
-            <button class="bModProfil">Modifier</button>
-            <button class="bDeconnexion">Deconnexion</button>
+        <div class="zoneProfil">
+            <button class="bProfil">Profil</button>
+            <div class="hoverProfil">
+                <button class="bModProfil" onClick={() => props.setPage("pageModifProfil")}>Modifier</button>
+                <button class="bDeconnexion" onClick={() => props.setPage("pageEntree")}>Deconnexion</button>
+            </div>
         </div>
     </header>
   );

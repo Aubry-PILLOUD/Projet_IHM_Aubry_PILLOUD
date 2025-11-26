@@ -4,7 +4,7 @@ import "./css/stTableauBord.css"
 export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
-        <HeaderUtilisateur />
+        <HeaderUtilisateur setPage={props.setPage} />
         <div id="pTableauBord">
             <h1>Tableau de Bord</h1>
             <div class="buttons">

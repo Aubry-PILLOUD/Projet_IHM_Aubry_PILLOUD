@@ -5,7 +5,7 @@ import "./css/stAjoutMission.css"
 export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
-        <HeaderUtilisateur />
+        <HeaderUtilisateur setPage={props.setPage} />
         <div id="pAjoutMission">
             <h1>Ajout de Mission</h1>
             <form class="form-mission">

@@ -4,7 +4,7 @@ import HeaderUtilisateur from "./headerUtilisateur";
 export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
-        <HeaderUtilisateur />
+        <HeaderUtilisateur setPage={props.setPage} />
         <div id="pPlanning">
         </div>
     </div>

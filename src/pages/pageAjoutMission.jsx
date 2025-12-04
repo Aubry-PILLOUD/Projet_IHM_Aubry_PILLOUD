@@ -1,18 +1,45 @@
-import HeaderUtilisateur from "./headerUtilisateur";
+import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
 import { createSignal } from "solid-js";
-import "./css/stAjoutMission.css"
+import "../css/stAjoutMission.css"
 
 export default (props) => {
+
+    const [nomMision, setNomMission] = createSignal("");
+    const [structure, setStructure] = createSignal("");
+    const [ville, setVille] = createSignal("");
+    const [service, setService] = createSignal("");
+    const [duree, setDuree] = createSignal("");
+    const [rythme, setRythme] = createSignal("");
+    const [heurePrise, setHeurePrise] = createSignal("");
+    const [heureFin, setHeureFin] = createSignal("");
+    const [couleur, setCouleur] = createSignal("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setNomMission("");
+        setStructure("");
+        setVille("");
+        setService("");
+        setDuree("");
+        setRythme("");
+        setHeurePrise("");
+        setHeureFin("");
+        setCouleur("");
+    };
+
   return (
     <div class={props.hidden ? "hidden" : ""}>
         <HeaderUtilisateur setPage={props.setPage} />
         <div id="pAjoutMission">
             <h1>Ajout de Mission</h1>
-            <form class="form-mission">
+            <form onSubmit={handleSubmit} class="form-mission">
                 <div class="formMission">
                     <span class="labelText">Nom de la Mission</span>
                     <span class="doublePoints">:</span>
-                    <input type="text" name="nomMision" id="nomMision" required />
+                    <input type="text" name="nomMision" id="nomMision" required
+                        onInput={(e) => setNomMission(e.currentTarget.value)}
+                        value={nomMision()}
+                    />
                 </div>
                 <div>
                     <h3>Lieu de Travail</h3>
@@ -20,12 +47,18 @@ export default (props) => {
                 <div class="formMission">
                     <span class="labelText">Structure</span>
                     <span class="doublePoints">:</span>
-                    <input type="text" name="structure" id="structure" required />
+                    <input type="text" name="structure" id="structure" required
+                        onInput={(e) => setStructure(e.currentTarget.value)}
+                        value={structure()}
+                    />
                 </div>
                 <div class="formMission">
                     <span class="labelText">Ville</span>
                     <span class="doublePoints">:</span>
-                    <input type="text" name="ville" id="ville" required />
+                    <input type="text" name="ville" id="ville" required
+                        onInput={(e) => setVille(e.currentTarget.value)}
+                        value={ville()}
+                    />
                 </div>
                 <div>
                     <h3>Contrat</h3>
@@ -33,17 +66,26 @@ export default (props) => {
                 <div class="formMission">
                     <span class="labelText">Service</span>
                     <span class="doublePoints">:</span>
-                    <input type="text" name="service" id="service" required />
+                    <input type="text" name="service" id="service" required
+                        onInput={(e) => setService(e.currentTarget.value)}
+                        value={service()}
+                    />
                 </div>
                 <div class="formMission">
                     <span class="labelText">Durée</span>
                     <span class="doublePoints">:</span>
-                    <input type="number" name="duree" id="duree" required />
+                    <input type="number" name="duree" id="duree" required
+                        onInput={(e) => setDuree(e.currentTarget.value)}
+                        value={duree()}
+                    />
                 </div>
                 <div class="formMission">
                     <span class="labelText">Rythme</span>
                     <span class="doublePoints">:</span>
-                    <input type="number" name="rythme" id="rythme" required />
+                    <input type="number" name="rythme" id="rythme" required
+                        onInput={(e) => setRythme(e.currentTarget.value)}
+                        value={rythme()}
+                    />
                 </div>
                 <div>
                     <h3>Journées Types</h3>
@@ -51,7 +93,10 @@ export default (props) => {
                 <div class="formMission">
                     <span class="labelText">Heure de Prise</span>
                     <span class="doublePoints">:</span>
-                    <select name="heurePrise" id="heurePrise" required>
+                    <select name="heurePrise" id="heurePrise" required
+                        onInput={(e) => setHeurePrise(e.currentTarget.value)}
+                        value={heurePrise()}
+                    >
                         <option value="minuit">Minuit</option>
                         <option value="uneH">1H</option>
                         <option value="deuxH">2H</option>
@@ -80,7 +125,10 @@ export default (props) => {
                 <div class="formMission">
                     <span class="labelText">Heure de Fin</span>
                     <span class="doublePoints">:</span>
-                    <select name="heureFin" id="heureFin" required>
+                    <select name="heureFin" id="heureFin" required 
+                        onInput={(e) => setHeureFin(e.currentTarget.value)}
+                        value={heureFin()}
+                    >
                         <option value="minuit">Minuit</option>
                         <option value="uneH">1H</option>
                         <option value="deuxH">2H</option>
@@ -110,7 +158,10 @@ export default (props) => {
                 <div class="formMission">
                     <span class="labelText">Couleur</span>
                     <span class="doublePoints">:</span>
-                    <select name="mCouleur" id="mCouleur" required>
+                    <select name="mCouleur" id="mCouleur" required 
+                        onInput={(e) => setCouleur(e.currentTarget.value)}
+                        value={couleur()}
+                    >
                         <option value="bleu">Bleu</option>
                         <option value="rouge">Rouge</option>
                         <option value="vert">Vert</option>

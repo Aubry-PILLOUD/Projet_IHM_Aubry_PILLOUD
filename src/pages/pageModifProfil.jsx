@@ -1,6 +1,6 @@
-import HeaderUtilisateur from "./headerUtilisateur";
+import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
 import { createSignal } from "solid-js";
-import "./css/stModifProfil.css"
+import "../css/stModifProfil.css"
 
 export default (props) => {
 

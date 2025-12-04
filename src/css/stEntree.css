@@ -29,3 +29,9 @@
   color: black;
   border: solid black;
 }
+
+#pEntree .buttons button:hover {
+    background-color: black;
+    color: white;
+    border: solid white;
+}

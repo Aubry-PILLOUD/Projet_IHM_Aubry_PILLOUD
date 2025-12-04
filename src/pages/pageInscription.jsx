@@ -1,9 +1,12 @@
 import { createSignal } from "solid-js";
-import HeaderCommun from "./headerCommun";
-import "./css/stInscription.css";
+import HeaderCommun from "../headerJSX/headerCommun";
+import "../css/stInscription.css";
 
 export default (props) => {
 
+    const [idText, setIdText] = createSignal("");
+    const [emailForm, setEmailForm] = createSignal("");
+    const [numTel, setNumTel] = createSignal("");
     const [mdp, setMdp] = createSignal("");
     const [confMdp, setConfMdp] = createSignal("");
     const [error, setError] = createSignal("");
@@ -25,8 +28,13 @@ export default (props) => {
             setError("Les mots de passe ne correspondent pas");
         } else {
             setError("");
+            setIdText("");
+            setEmailForm("");
+            setNumTel("");
             props.setPage("pageCodeVerif");
         }
+        setMdp("");
+        setConfMdp("");
     };
 
   return (
@@ -38,17 +46,26 @@ export default (props) => {
                 <div class="formInscription">
                     <span class="labelText">Identifiant</span>
                     <span class="doublePoints">:</span>
-                    <input type="text" name="utilID" id="utilID" required />
+                    <input type="text" name="utilID" id="utilID" required 
+                        onInput={(e) => setIdText(e.currentTarget.value)}
+                        value={idText()}
+                    />
                 </div>
                 <div class="formInscription">
                     <span class="labelText">Email</span>
                     <span class="doublePoints">:</span>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="email" id="email" required 
+                        onInput={(e) => setEmailForm(e.currentTarget.value)}
+                        value={emailForm()}
+                    />
                 </div>
                 <div class="formInscription">
                     <span class="labelText">Numéro de téléphone</span>
                     <span class="doublePoints">:</span>
-                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" onKeyDown={handleKeyDown} required />
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" onKeyDown={handleKeyDown} required 
+                        onInput={(e) => setNumTel(e.currentTarget.value)}
+                        value={numTel()}
+                    />
                 </div>
                 <div class="formInscription">
                     <span class="labelText">Mot de passe</span>

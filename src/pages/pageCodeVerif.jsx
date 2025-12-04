@@ -1,6 +1,6 @@
 import { createSignal } from "solid-js";
-import HeaderCommun from "./headerCommun";
-import "./css/stCodeVerif.css";
+import HeaderCommun from "../headerJSX/headerCommun";
+import "../css/stCodeVerif.css";
 
 export default (props) => {
     const [codeV, setCodeV] = createSignal("");
@@ -26,6 +26,7 @@ export default (props) => {
     e.preventDefault();
     if (codeV().length === 6) {
       setError("");
+      setCodeV("");
       props.setPage("pageTableauBord");
     } else {
       setError("Veuillez entrer exactement 6 chiffres");

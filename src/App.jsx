@@ -1,11 +1,12 @@
 import { createSignal, createEffect } from "solid-js";
-import PageEntree from "./pageEntree";
-import PageInscription from "./pageInscription";
-import PageCodeVerif from "./pageCodeVerif";
-import PageTableauBord from "./pageTableauBord"
-import PageModifProfil from "./pageModifProfil";
-import PageAjoutMission from "./pageAjoutMission"
-import PagePlanning from "./pagePlanning";
+import PageEntree from "./pages/pageEntree";
+import PageInscription from "./pages/pageInscription";
+import PageConnexion from "./pages/pageConnexion";
+import PageCodeVerif from "./pages/pageCodeVerif";
+import PageTableauBord from "./pages/pageTableauBord"
+import PageModifProfil from "./pages/pageModifProfil";
+import PageAjoutMission from "./pages/pageAjoutMission"
+import PagePlanning from "./pages/pagePlanning";
 
 const App = () => {
   const [page, setPage] = createSignal("pageTableauBord");
@@ -17,6 +18,7 @@ const App = () => {
     <>
       <PageEntree hidden={page() !== "pageEntree"} setPage={setPage} />
       <PageInscription hidden={page() !== "pageInscription"} setPage={setPage} />
+      <PageConnexion hidden={page() !== "pageConnexion"} setPage={setPage} />
       <PageCodeVerif hidden={page() !== "pageCodeVerif"} setPage={setPage} />
       <PageTableauBord hidden={page() !== "pageTableauBord"} setPage={setPage} />
       <PageModifProfil hidden={page() !== "pageModifProfil"} setPage={setPage} />

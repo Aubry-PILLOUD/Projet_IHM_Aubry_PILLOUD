@@ -1,5 +1,5 @@
-import HeaderUtilisateur from "./headerUtilisateur";
-// import "./css/stPlanning.css"
+import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+// import "../css/stPlanning.css"
 
 export default (props) => {
   return (

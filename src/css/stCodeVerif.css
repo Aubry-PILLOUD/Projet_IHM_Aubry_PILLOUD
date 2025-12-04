@@ -63,3 +63,9 @@
   color: black;
   border: solid black;
 }
+
+#pCodeVerif .boutonValid input:hover {
+    background-color: black;
+    color: white;
+    border: solid white;
+}

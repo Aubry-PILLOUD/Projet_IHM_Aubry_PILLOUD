@@ -1,5 +1,5 @@
-import HeaderUtilisateur from "./headerUtilisateur";
-import "./css/stTableauBord.css"
+import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+import "../css/stTableauBord.css"
 
 export default (props) => {
   return (
@@ -12,7 +12,13 @@ export default (props) => {
                 <button onClick={() => props.setPage("pageGestionComp")}>Gestion Comptabilité</button>
             </div>
             <div class="buttons">
-                <button class="bCommu" onClick={() => props.setPage("pageCommunication")}>Communication</button>
+                <div class="zoneCommu">
+                    <button onClick={() => props.setPage("pageCommunication")}>Communication</button>
+                    <div class="hoverCommu">
+                        <button class="sousBouton">Chat Public</button>
+                        <button class="sousBouton">Chats Privés</button>
+                    </div>
+                </div>
                 <button onClick={() => props.setPage("pageEvaluation")}>Evaluation des Etablissements</button>
             </div>
             <div class="buttons">

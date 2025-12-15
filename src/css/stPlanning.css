@@ -1,0 +1,71 @@
+.hidden {
+  display: none !important;
+}
+
+#pPlanning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  /* background-color: aqua; */
+}
+
+#pPlanning #divPlanning{
+    display: grid;
+    /* background-color: lightgray; */
+    padding-bottom: 50px;
+}
+
+#pPlanning #divPlanning .tetePlanning{
+    display: grid;
+    stroke: black;
+    grid-template-columns: 10% 45% 35% 10%;
+}
+
+#pPlanning #divPlanning .tetePlanning div{
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#pPlanning #divPlanning .tetePlanning button {
+    cursor: pointer;
+}
+
+
+#pPlanning #divPlanning .corpsPlanning{
+    display: grid;
+    stroke: black;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+#pPlanning #divPlanning .corpsPlanning div{
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    height: 25px;
+    width: 80px;
+}
+
+#pPlanning .boutonPlan{
+  font-size: 24px;
+  font-family: Arial;
+  padding: 18px 48px;   /* taille du bouton (espace intérieur) */
+  cursor: pointer;      /* curseur au survol */
+  background-color: white;
+  color: black;
+  border: solid black;
+}
+
+#pPlanning .boutonPlan:hover {
+    background-color: black;
+    color: white;
+    border: solid white;
+}

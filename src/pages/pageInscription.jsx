@@ -28,6 +28,7 @@ export default (props) => {
             setError("Les mots de passe ne correspondent pas");
         } else {
             setError("");
+            props.setUserName(idText());
             setIdText("");
             setEmailForm("");
             setNumTel("");

@@ -16,6 +16,7 @@ export default (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        props.setPage("pagePlanning");
         setNomMission("");
         setStructure("");
         setVille("");
@@ -29,7 +30,7 @@ export default (props) => {
 
   return (
     <div class={props.hidden ? "hidden" : ""}>
-        <HeaderUtilisateur setPage={props.setPage} />
+        <HeaderUtilisateur setPage={props.setPage} userName={props.userName} />
         <div id="pAjoutMission">
             <h1>Ajout de Mission</h1>
             <form onSubmit={handleSubmit} class="form-mission">

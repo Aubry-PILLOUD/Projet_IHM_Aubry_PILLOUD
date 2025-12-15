@@ -1,0 +1,41 @@
+.hidden {
+  display: none !important;
+}
+
+#pGestionComp {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: flex-start;  /* Aligne les blocs par le haut */
+  gap: 100px;               /* Espace horizontal */
+  min-height: 70vh;
+  padding-top: 50px;
+}
+
+#pGestionComp .partGestion,
+#pGestionComp .partCompta {
+  display: flex;
+  flex-direction: column; /* Aligne verticalement */
+  align-items: center;    /* Centre horizontalement */
+  gap: 20px;              /* Espacement */
+  border: 2px solid black;
+  padding: 30px 60px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+
+#pGestionComp button{
+  font-size: 24px;
+  font-family: Arial;
+  padding: 18px 48px;   /* taille du bouton (espace intérieur) */
+  cursor: pointer;      /* curseur au survol */
+  background-color: white;
+  color: black;
+  border: solid black;
+}
+
+#pGestionComp button:hover {
+    background-color: black;
+    color: white;
+    border: solid white;
+}

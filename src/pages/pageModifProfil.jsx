@@ -6,12 +6,15 @@ export default (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const nom = e.currentTarget.nom.value;
+        const prenom = e.currentTarget.prenom.value;
+        props.setUserName(`${nom} ${prenom}`);
         props.setPage("pageTableauBord");
     };
 
   return (
     <div class={props.hidden ? "hidden" : ""}>
-        <HeaderUtilisateur />
+        <HeaderUtilisateur setPage={props.setPage} userName={props.userName} />
         <div id="pModifProfil">
             <h1>Profil</h1>
             <form onSubmit={handleSubmit} class="form-profil">

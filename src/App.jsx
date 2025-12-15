@@ -5,25 +5,28 @@ import PageConnexion from "./pages/pageConnexion";
 import PageCodeVerif from "./pages/pageCodeVerif";
 import PageTableauBord from "./pages/pageTableauBord"
 import PageModifProfil from "./pages/pageModifProfil";
-import PageAjoutMission from "./pages/pageAjoutMission"
 import PagePlanning from "./pages/pagePlanning";
+import PageAjoutMission from "./pages/pageAjoutMission"
+import PageGestionComp from "./pages/pageGestionComp";
 
 const App = () => {
-  const [page, setPage] = createSignal("pageTableauBord");
+  const [page, setPage] = createSignal("pagePlanning");
+  const [userName, setUserName] = createSignal("");
 
   // Debug facile
-  createEffect(() => console.log("Current page:", page()));
+  createEffect(() => console.log("Current page:", page(), "User:", userName()));
 
   return (
     <>
       <PageEntree hidden={page() !== "pageEntree"} setPage={setPage} />
-      <PageInscription hidden={page() !== "pageInscription"} setPage={setPage} />
+      <PageInscription hidden={page() !== "pageInscription"} setPage={setPage} setUserName={setUserName}/>
       <PageConnexion hidden={page() !== "pageConnexion"} setPage={setPage} />
       <PageCodeVerif hidden={page() !== "pageCodeVerif"} setPage={setPage} />
-      <PageTableauBord hidden={page() !== "pageTableauBord"} setPage={setPage} />
-      <PageModifProfil hidden={page() !== "pageModifProfil"} setPage={setPage} />
-      <PagePlanning hidden={page() !== "pagePlanning"} setPage={setPage} />
-      <PageAjoutMission hidden={page() !== "pageAjoutMission"} setPage={setPage} />
+      <PageTableauBord hidden={page() !== "pageTableauBord"} setPage={setPage} userName={userName()}/>
+      <PageModifProfil hidden={page() !== "pageModifProfil"} setPage={setPage} userName={userName()} setUserName={setUserName}/>
+      <PagePlanning hidden={page() !== "pagePlanning"} setPage={setPage} userName={userName()}/>
+      <PageAjoutMission hidden={page() !== "pageAjoutMission"} setPage={setPage} userName={userName()}/>
+      <PageGestionComp hidden={page() !== "pageGestionComp"} setPage={setPage} userName={userName()}/>
     </>
   );
 };

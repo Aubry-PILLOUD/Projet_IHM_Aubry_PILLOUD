@@ -8,9 +8,11 @@ import PageModifProfil from "./pages/pageModifProfil";
 import PagePlanning from "./pages/pagePlanning";
 import PageAjoutMission from "./pages/pageAjoutMission"
 import PageGestionComp from "./pages/pageGestionComp";
+import PageDepotContrat from "./pages/pageDepotContrat";
+import PageEvalAvis from "./pages/pageEvalAvis";
 
 const App = () => {
-  const [page, setPage] = createSignal("pagePlanning");
+  const [page, setPage] = createSignal("pageEntree");
   const [userName, setUserName] = createSignal("");
 
   // Debug facile
@@ -27,6 +29,8 @@ const App = () => {
       <PagePlanning hidden={page() !== "pagePlanning"} setPage={setPage} userName={userName()}/>
       <PageAjoutMission hidden={page() !== "pageAjoutMission"} setPage={setPage} userName={userName()}/>
       <PageGestionComp hidden={page() !== "pageGestionComp"} setPage={setPage} userName={userName()}/>
+      <PageDepotContrat hidden={page() !== "pageDepotContrat"} setPage={setPage} userName={userName()}/>
+      <PageEvalAvis hidden={page() !== "pageEvalAvis"} setPage={setPage} userName={userName()}/>
     </>
   );
 };

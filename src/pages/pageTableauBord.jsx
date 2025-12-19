@@ -1,4 +1,4 @@
-import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+import HeaderUtilisateur from "../communJSX/headerUtilisateur";
 import "../css/stTableauBord.css"
 
 export default (props) => {

@@ -1,8 +1,11 @@
-import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+import HeaderUtilisateur from "../communJSX/headerUtilisateur";
+import BoutonRetour from "../communJSX/boutonRetour";
 import { createSignal } from "solid-js";
 import "../css/stAjoutMission.css"
 
 export default (props) => {
+
+    const directionPage = () => props.setPage("pagePlanning");
 
     const [nomMision, setNomMission] = createSignal("");
     const [structure, setStructure] = createSignal("");
@@ -31,6 +34,7 @@ export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
         <HeaderUtilisateur setPage={props.setPage} userName={props.userName} />
+        <BoutonRetour onClick={directionPage} label="<---" />
         <div id="pAjoutMission">
             <h1>Ajout de Mission</h1>
             <form onSubmit={handleSubmit} class="form-mission">

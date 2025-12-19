@@ -1,8 +1,11 @@
-import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+import HeaderUtilisateur from "../communJSX/headerUtilisateur";
+import BoutonRetour from "../communJSX/boutonRetour";
 import { createSignal } from "solid-js";
 import "../css/stModifProfil.css"
 
 export default (props) => {
+
+    const directionPage = () => props.setPage("pageTableauBord");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,6 +18,7 @@ export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
         <HeaderUtilisateur setPage={props.setPage} userName={props.userName} />
+        <BoutonRetour onClick={directionPage} label="<---" />
         <div id="pModifProfil">
             <h1>Profil</h1>
             <form onSubmit={handleSubmit} class="form-profil">

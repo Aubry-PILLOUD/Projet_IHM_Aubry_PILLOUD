@@ -1,14 +1,19 @@
-import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+import HeaderUtilisateur from "../communJSX/headerUtilisateur";
+import BoutonRetour from "../communJSX/boutonRetour";
 import "../css/stGestionComp.css"
 
 export default (props) => {
+
+    const directionPage = () => props.setPage("pageTableauBord");
+
   return (
     <div class={props.hidden ? "hidden" : ""}>
         <HeaderUtilisateur setPage={props.setPage} userName={props.userName} />
+        <BoutonRetour onClick={directionPage} label="<---" />
         <div id="pGestionComp">
             <div class="partGestion">
                 <h1>Gestion</h1>
-                <button>Déposer Contrat</button>
+                <button onClick={() => props.setPage("pageDepotContrat")}>Déposer Contrat</button>
                 <button>Voir Contrat</button>
             </div>
             <div class="partCompta">

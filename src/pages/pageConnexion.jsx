@@ -1,8 +1,11 @@
 import { createSignal } from "solid-js";
-import HeaderCommun from "../headerJSX/headerCommun";
+import HeaderCommun from "../communJSX/headerCommun";
+import BoutonRetour from "../communJSX/boutonRetour";
 import "../css/stConnexion.css";
 
 export default (props) => {
+
+    const directionPage = () => props.setPage("pageEntree");
 
     const [idText, setIdText] = createSignal("");
     const [mdp, setMdp] = createSignal("");
@@ -23,6 +26,7 @@ export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
         <HeaderCommun />
+        <BoutonRetour onClick={directionPage} label="<---" />
         <div id="pConnexion">
             <h1>Connexion</h1>
             <form onSubmit={handleSubmit} class="form-connexion">

@@ -1,0 +1,57 @@
+.hidden {
+  display: none !important;
+}
+
+#pDepotContrat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+#pDepotContrat h1 {
+  font-size: 6vh;
+  margin-bottom: 50px;
+}
+
+#pDepotContrat .formFile,
+#pDepotContrat .formAnnee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 26px;
+  margin-bottom: 25px;
+  padding: 15px;
+  min-height: 60px;
+  width: 70%;
+  max-width: 500px;
+}
+
+#pDepotContrat .formFile .labelText,
+#pDepotContrat .formAnnee .labelText {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#pDepotContrat .boutonDepot {
+  text-align: center;
+}
+
+#pDepotContrat .boutonDepot input {
+  font-size: 24px;
+  font-family: Arial;
+  padding: 18px 48px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: solid black;
+}
+
+#pDepotContrat .boutonDepot input:hover {
+  background-color: black;
+  color: white;
+  border: solid white;
+}

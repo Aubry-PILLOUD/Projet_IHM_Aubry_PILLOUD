@@ -1,0 +1,15 @@
+.hidden {
+  display: none !important;
+}
+
+#pEvalAvis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+#pEvalAvis h1{
+    font-size: 6vh;
+}

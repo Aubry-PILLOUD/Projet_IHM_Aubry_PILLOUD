@@ -1,8 +1,11 @@
-import HeaderUtilisateur from "../headerJSX/headerUtilisateur";
+import HeaderUtilisateur from "../communJSX/headerUtilisateur";
+import BoutonRetour from "../communJSX/boutonRetour";
 import { createSignal, onMount } from "solid-js";
 import "../css/stPlanning.css"
 
 export default (props) => {
+
+    const directionPage = () => props.setPage("pageTableauBord");
 
     const listeMois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", 
         "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
@@ -60,6 +63,7 @@ export default (props) => {
   return (
     <div class={props.hidden ? "hidden" : ""}>
         <HeaderUtilisateur setPage={props.setPage} userName={props.userName} />
+        <BoutonRetour onClick={directionPage} label="<---" />
         <div id="pPlanning">
             <div id="divPlanning" width="800">
                 <div class="tetePlanning">

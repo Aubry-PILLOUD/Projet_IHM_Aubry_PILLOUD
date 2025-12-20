@@ -19,7 +19,7 @@ export default (props) => {
                         <button class="sousBouton">Chats Privés</button>
                     </div>
                 </div>
-                <button onClick={() => props.setPage("pageEvaluation")}>Evaluation des Etablissements</button>
+                <button onClick={() => props.setPage("pageEtablissements")}>Evaluation des Etablissements</button>
             </div>
             <div class="buttons">
                 <button onClick={() => props.setPage("pageSecurite")}>Sécurité</button>

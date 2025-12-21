@@ -1,6 +1,6 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
-import "../css/stEvalEtablis.css";
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
+import "../../css/etablissements/stEvalEtablis.css";
 
 export default (props) => {
   const directionPage = () => props.setPage("pageEtablissements");

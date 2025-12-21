@@ -9,12 +9,14 @@ import PagePlanning from "./pages/dosPlanning/pagePlanning";
 import PageAjoutMission from "./pages/dosPlanning/pageAjoutMission"
 import PageGestionComp from "./pages/dosGestionComp/pageGestionComp";
 import PageDepotContrat from "./pages/dosGestionComp/pageDepotContrat";
-import PageEtablissements from "./pages/pageEtablissements";
-import PageEvalEtablis from "./pages/pageEvalEtablis";
-import PageAjoutAvis from "./pages/pageAjoutAvis";
+import PageEtablissements from "./pages/dosEtablissements/pageEtablissements";
+import PageEvalEtablis from "./pages/dosEtablissements/pageEvalEtablis";
+import PageAjoutAvis from "./pages/dosEtablissements/pageAjoutAvis";
+import PageChatGeneral from "./pages/dosChats/pageChatGeneral";
+import PageListeChatsPrivés from "./pages/dosChats/pageListeChatsPrivés";
 
 const App = () => {
-  const [page, setPage] = createSignal("pageAjoutAvis");
+  const [page, setPage] = createSignal("pageEntree");
   const [userName, setUserName] = createSignal("");
 
   // Debug facile
@@ -35,6 +37,8 @@ const App = () => {
       <PageEtablissements hidden={page() !== "pageEtablissements"} setPage={setPage} userName={userName()}/>
       <PageEvalEtablis hidden={page() !== "pageEvalEtablis"} setPage={setPage} userName={userName()}/>
       <PageAjoutAvis hidden={page() !== "pageAjoutAvis"} setPage={setPage} userName={userName()}/>
+      <PageChatGeneral hidden={page() !== "pageChatGeneral"} setPage={setPage} userName={userName()}/>
+      <PageListeChatsPrivés hidden={page() !== "pageListeChatsPrivés"} setPage={setPage} userName={userName()}/>
     </>
   );
 };

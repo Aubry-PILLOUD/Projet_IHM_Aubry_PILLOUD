@@ -1,7 +1,7 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
 import { createSignal } from "solid-js";
-import "../css/stAjoutAvis.css";
+import "../../css/etablissements/stAjoutAvis.css";
 
 export default (props) => {
     const directionPage = () => props.setPage("pageEvalEtablis");

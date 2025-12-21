@@ -1,7 +1,7 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
 import { For } from "solid-js";
-import "../css/stEtablissements.css";
+import "../../css/etablissements/stEtablissements.css";
 
 export default (props) => {
   const directionPage = () => props.setPage("pageTableauBord");

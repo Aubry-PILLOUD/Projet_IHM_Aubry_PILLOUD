@@ -15,8 +15,8 @@ export default (props) => {
                 <div class="zoneCommu">
                     <button onClick={() => props.setPage("pageCommunication")}>Communication</button>
                     <div class="hoverCommu">
-                        <button class="sousBouton">Chat Public</button>
-                        <button class="sousBouton">Chats Privés</button>
+                        <button class="sousBouton" onClick={() => props.setPage("pageChatGeneral")}>Chat Public</button>
+                        <button class="sousBouton" onClick={() => props.setPage("pageListeChatsPrivés")}>Chats Privés</button>
                     </div>
                 </div>
                 <button onClick={() => props.setPage("pageEtablissements")}>Evaluation des Etablissements</button>

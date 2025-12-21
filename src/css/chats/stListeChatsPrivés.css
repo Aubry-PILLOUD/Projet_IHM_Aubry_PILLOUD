@@ -1,0 +1,49 @@
+.hidden {
+  display: none !important;
+}
+
+#pListChats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+
+#pListChats h1{
+    font-size: 6vh;
+}
+
+#pListChats #listChats {
+    font-size: 18px;
+    width: 60%;
+    min-height: 400px;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#pListChats .sousChat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#pListChats .sousChat .nomChat{
+  font-size: 40px;
+}
+
+#pListChats .sousChat .nbMembres{
+  font-size: 30px;
+}

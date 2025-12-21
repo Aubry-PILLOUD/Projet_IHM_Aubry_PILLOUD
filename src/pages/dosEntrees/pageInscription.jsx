@@ -1,7 +1,7 @@
 import { createSignal } from "solid-js";
-import HeaderCommun from "../communJSX/headerCommun";
-import BoutonRetour from "../communJSX/boutonRetour";
-import "../css/stInscription.css";
+import HeaderCommun from "../../communJSX/headerCommun";
+import BoutonRetour from "../../communJSX/boutonRetour";
+import "../../css/entrees/stInscription.css";
 
 export default (props) => {
 

@@ -1,6 +1,6 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
-import "../css/stDepotContrat.css"
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
+import "../../css/gestionComp/stDepotContrat.css"
 
 export default (props) => {
     

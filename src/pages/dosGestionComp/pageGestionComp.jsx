@@ -1,6 +1,6 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
-import "../css/stGestionComp.css"
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
+import "../../css/gestionComp/stGestionComp.css"
 
 export default (props) => {
 

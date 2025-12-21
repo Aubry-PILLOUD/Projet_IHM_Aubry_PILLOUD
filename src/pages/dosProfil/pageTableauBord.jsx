@@ -1,5 +1,5 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import "../css/stTableauBord.css"
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import "../../css/profils/stTableauBord.css"
 
 export default (props) => {
   return (

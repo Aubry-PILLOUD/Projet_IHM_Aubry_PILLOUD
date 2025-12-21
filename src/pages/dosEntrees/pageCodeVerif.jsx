@@ -1,6 +1,6 @@
 import { createSignal } from "solid-js";
-import HeaderCommun from "../communJSX/headerCommun";
-import "../css/stCodeVerif.css";
+import HeaderCommun from "../../communJSX/headerCommun";
+import "../../css/entrees/stCodeVerif.css";
 
 export default (props) => {
     const [codeV, setCodeV] = createSignal("");

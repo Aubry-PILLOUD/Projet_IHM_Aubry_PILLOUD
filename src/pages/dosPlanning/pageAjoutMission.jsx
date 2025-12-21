@@ -1,7 +1,7 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
 import { createSignal } from "solid-js";
-import "../css/stAjoutMission.css"
+import "../../css/planning/stAjoutMission.css"
 
 export default (props) => {
 

@@ -1,7 +1,7 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
 import { createSignal } from "solid-js";
-import "../css/stModifProfil.css"
+import "../../css/profils/stModifProfil.css"
 
 export default (props) => {
 

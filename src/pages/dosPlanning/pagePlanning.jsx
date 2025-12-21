@@ -1,7 +1,7 @@
-import HeaderUtilisateur from "../communJSX/headerUtilisateur";
-import BoutonRetour from "../communJSX/boutonRetour";
+import HeaderUtilisateur from "../../communJSX/headerUtilisateur";
+import BoutonRetour from "../../communJSX/boutonRetour";
 import { createSignal, onMount } from "solid-js";
-import "../css/stPlanning.css"
+import "../../css/planning/stPlanning.css"
 
 export default (props) => {
 

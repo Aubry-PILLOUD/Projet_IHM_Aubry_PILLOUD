@@ -1,6 +1,6 @@
 import { createSignal } from "solid-js";
 import HeaderCommun from "./headerCommun";
-import "../css/headerUtilisateur.css";
+import "../css/headers/headerUtilisateur.css";
 
 export default (props) => {
   return (

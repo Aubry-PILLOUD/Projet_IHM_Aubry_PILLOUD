@@ -1,19 +1,20 @@
 import { createSignal, createEffect } from "solid-js";
-import PageEntree from "./pages/pageEntree";
-import PageInscription from "./pages/pageInscription";
-import PageConnexion from "./pages/pageConnexion";
-import PageCodeVerif from "./pages/pageCodeVerif";
-import PageTableauBord from "./pages/pageTableauBord"
-import PageModifProfil from "./pages/pageModifProfil";
-import PagePlanning from "./pages/pagePlanning";
-import PageAjoutMission from "./pages/pageAjoutMission"
-import PageGestionComp from "./pages/pageGestionComp";
-import PageDepotContrat from "./pages/pageDepotContrat";
+import PageEntree from "./pages/dosEntrees/pageEntree";
+import PageInscription from "./pages/dosEntrees/pageInscription";
+import PageConnexion from "./pages/dosEntrees/pageConnexion";
+import PageCodeVerif from "./pages/dosEntrees/pageCodeVerif";
+import PageTableauBord from "./pages/dosProfil/pageTableauBord"
+import PageModifProfil from "./pages/dosProfil/pageModifProfil";
+import PagePlanning from "./pages/dosPlanning/pagePlanning";
+import PageAjoutMission from "./pages/dosPlanning/pageAjoutMission"
+import PageGestionComp from "./pages/dosGestionComp/pageGestionComp";
+import PageDepotContrat from "./pages/dosGestionComp/pageDepotContrat";
 import PageEtablissements from "./pages/pageEtablissements";
 import PageEvalEtablis from "./pages/pageEvalEtablis";
+import PageAjoutAvis from "./pages/pageAjoutAvis";
 
 const App = () => {
-  const [page, setPage] = createSignal("pageEvalEtablis");
+  const [page, setPage] = createSignal("pageAjoutAvis");
   const [userName, setUserName] = createSignal("");
 
   // Debug facile
@@ -33,6 +34,7 @@ const App = () => {
       <PageDepotContrat hidden={page() !== "pageDepotContrat"} setPage={setPage} userName={userName()}/>
       <PageEtablissements hidden={page() !== "pageEtablissements"} setPage={setPage} userName={userName()}/>
       <PageEvalEtablis hidden={page() !== "pageEvalEtablis"} setPage={setPage} userName={userName()}/>
+      <PageAjoutAvis hidden={page() !== "pageAjoutAvis"} setPage={setPage} userName={userName()}/>
     </>
   );
 };
